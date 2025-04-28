@@ -1,7 +1,9 @@
 package ru.yandex.praktikum.model;
 
+import static ru.yandex.praktikum.model.constants.Discount.DISCOUNT_DEFAULT;
 
-public abstract class Food {
+
+public abstract class Food implements Discountable{
     protected int amount;
     protected double price;
     protected boolean isVegetarian;
@@ -10,6 +12,10 @@ public abstract class Food {
         this.amount = amount;
         this.price = price;
         this.isVegetarian = isVegetarian;
+    }
+    @Override
+    public double getDiscount() {
+        return DISCOUNT_DEFAULT;
     }
 
 public int getAmount(){
@@ -24,4 +30,5 @@ public double getPrice(){
 public boolean isVegetarian(){
         return isVegetarian;
 }
+
 }

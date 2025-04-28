@@ -5,4 +5,8 @@ public class Meat extends Food {
 
         super(amount, price, false);
     }
+    @Override
+    public double getDiscount() {
+        return 0;
+    }
 }
