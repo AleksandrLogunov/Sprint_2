@@ -5,7 +5,7 @@ import ru.yandex.praktikum.model.constants.Colour;
 import ru.yandex.praktikum.model.constants.Discount;
 
 
-public class Apple extends Food implements Discountable {
+public class Apple extends Food {
     private String color;
 
     public Apple(int amount, double price, String color) {
